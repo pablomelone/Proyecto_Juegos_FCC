@@ -27,3 +27,5 @@ def adivina_el_numero(x):
 
 
 adivina_el_numero(10)
+
+#agregar el while de menu, y los demás juegos

@@ -54,8 +54,6 @@ def jugar():
             
 
 
-
-
 def menu():
 
     x = 0
@@ -74,7 +72,7 @@ def menu():
 
 
         if x == 1:
-            n = int(input("dame un numero"))
+            n = int(input("dame un numero: "))
             adivina_el_numero(n)
 
         if x == 2:

@@ -9,7 +9,6 @@ def adivina_el_numero(x):
     print("-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.")
     print("Su objetivo es adivinar el numero aleatorio")
     
-
     numero_aleatorio = random.randint(1, x)
 
     prediccion = 0
@@ -26,6 +25,15 @@ def adivina_el_numero(x):
 
 
 #Juego Rock-Paper-Scissor
+def gano_el_jugador(jugador, oponente):
+    if ((jugador == 'ti' and oponente =='pa') or 
+    (jugador == 'pa' and oponente == 'pi') or
+    (jugador == 'pi' and oponente == 'ti')):
+        return True
+    else:
+        return False
+
+
 def jugar():
     print("                                       ")
     print("--------------------------------------")
@@ -37,25 +45,14 @@ def jugar():
     computadora = random.choice(['pi', 'pa', 'ti'])
     
     if usuario == computadora:
-        print("la computadora elijio " + computadora)
-        return 'EMPATE!!!'
+        print("la computadora elijio " + computadora + '  ...EMPATE!!!')
     else:
         if gano_el_jugador(usuario,computadora):
-            print("la computadora elijio " + computadora)
-            return 'GANASTE!!!!'
-    
+            print("la computadora elijio " + computadora + '  ..GANASTE!!!!')
         else:
-            print("la computadora elijio " + computadora)
-            return 'Perdiste :('
+            print("la computadora elijio " + computadora + ' ..Perdiste :(')
+            
 
-
-def gano_el_jugador(jugador, oponente):
-    if ((jugador == 'ti' and oponente =='pa') or 
-    (jugador == 'pa' and oponente == 'pi') or
-    (jugador == 'pi' and oponente == 'ti')):
-        return True
-    else:
-        return False
 
 
 
